@@ -1,0 +1,135 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+
+/*--------------------*/
+/*------- basic ------*/
+/*--------------------*/
+
+body{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    background-color: #c84030;
+    color:#fff;
+    font-weight: 100;
+        text-transform: uppercase;
+}
+
+#headercontainer{
+    width:415px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#headercontainer h1{
+    margin-top: 45px;
+    background-image: url("images/centaura.png");
+    padding-top: 95px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    font-weight: 300;
+    text-align: center;
+    font-size: 1.6em;
+}
+
+#headercontainer h2{
+    margin-top: -6px;
+    font-weight: 300;
+    text-align: center;
+    font-size: 1.05em;
+}
+
+#anderekeuzelink{
+    text-align: center;
+    text-decoration: none;
+    color:#ffffff;
+    font-size: 0.72em;
+    background-image: url("images/anderjaar.png");
+    padding-bottom: 10px;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    width:140px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 18px;
+}
+
+#anderjaar{
+    width:100%;
+    background-color: #faf6f1;
+    position: relative;
+    padding-bottom: 12px;
+    padding-top: 15px;
+    margin-top: -7px;
+    display: none;
+}
+
+#anderjaar ul{
+    width:415px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#anderjaar ul li{
+    float: left;
+    list-style: none;
+    margin-right: 17px;
+    padding-bottom: 5px;
+}
+
+#anderjaar ul li a{
+    color:#e34533;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#clear{
+    clear:both;
+}
+
+#contentcontainer{
+    width: 415px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+
+#contentcontainer ul  li{
+    list-style: none;
+    text-align: center;
+
+}
+
+.firstli{
+    border-bottom: #f15746 1px solid;
+    padding-bottom: 11px;
+    padding-top: 11px;
+}
+
+.lidfunctie{
+   font-size: 1.2em;
+}
+
+.lidnaam{
+    font-size: 0.9em;
+}
+
+#terug{
+    display: block;
+    position: absolute;
+    top:5px;
+    left:10px;
+    color:#f38c81;
+    text-decoration: none;
+    text-transform: none;
+    font-size: 0.9em;
+    font-weight: 500;
+}

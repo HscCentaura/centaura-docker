@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+padding : 0;
+margin:auto;	
+}
+
+#content{
+	margin:auto;
+width:960px;
+}
+body{
+	background-color:#FFF;
+	background-image:url(assets/logoCenComingSoon.png);
+	background-repeat:no-repeat;
+	background-position:center top;
+	
+	}
+	
+img{
+text-align:center;	
+}

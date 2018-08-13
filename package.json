@@ -1,0 +1,17 @@
+{
+	"name": "centaura",
+	"version": "0.1.0",
+	"description": "",
+	"main": "",
+	"scripts": {
+		"start": "docker-compose down -v && docker-compose up --build -d",
+		"start:del": "bash ./build_scripts/start_del.sh && npm start",
+		"docker:del": "bash ./build_scripts/start_del.sh npm run docker",
+		"docker": "docker-compose down -v && docker-compose up --build"
+	},
+	"author": "Stijn Van Hulle <stijn.vanhulle@outlook.com>",
+	"license": "MIT",
+	"devDependencies": {},
+	"dependencies": {},
+	"optionalDependencies": {}
+}

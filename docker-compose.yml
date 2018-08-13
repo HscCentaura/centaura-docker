@@ -1,0 +1,103 @@
+version: "3.5"
+services:
+  nginx:
+    build:
+      context: .
+      dockerfile: ./config/docker/nginx/Dockerfile
+    links: ["odoo", "wordpress", "phpmyadmin"]
+    depends_on: ["odoo"]
+    env_file:
+      - ./.env
+    ports: ["80:80"]
+    restart: always
+  mysql:
+    build:
+      context: .
+      dockerfile: ./config/docker/mysql/Dockerfile
+
+    restart: always
+    volumes:
+      - ./volumes/mysql:/var/lib/mysql
+    networks: ["default"]
+    env_file:
+      - ./.env
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: centaura
+      MYSQL_USER: centaura
+      MYSQL_PASSWORD: YhCKpSjBdUv7EbWX
+
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      timeout: 20s
+      retries: 10
+
+  wordpress:
+    build:
+      context: .
+      dockerfile: ./config/docker/wordpress/Dockerfile
+    volumes:
+      - ./volumes/wordpress:/var/www/html
+    restart: always
+    networks: ["default"]
+    depends_on:
+      - mysql
+    links:
+      - mysql
+    env_file:
+      - ./.env
+    environment:
+      WORDPRESS_DB_HOST: mysql:3306
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: YhCKpSjBdUv7EbWX
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    depends_on:
+      - mysql
+    ports:
+      - 8181:80
+    links:
+      - mysql
+    restart: on-failure
+    networks: ["default"]
+    env_file:
+      - ./.env
+    environment:
+      PMA_HOST: mysql
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: centaura
+      MYSQL_PASSWORD: YhCKpSjBdUv7EbWX
+
+  odoo:
+    image: odoo:latest
+    depends_on:
+      - postgress
+    links:
+      - postgress
+    volumes:
+      - ./volumes/odoo:/var/lib/odoo
+    ports:
+      - "8069:8069"
+    networks: ["default"]
+    env_file:
+      - ./.env
+    environment:
+      - HOST=postgress
+      - USER=odoo
+      - PASSWORD=myodoo
+  postgress:
+    image: postgres:9.4
+    volumes:
+      - ./volumes/postgress:/var/lib/postgres/data
+    networks: ["default"]
+    env_file:
+      - ./.env
+    environment:
+      - POSTGRES_USER=odoo
+      - POSTGRES_PASSWORD=myodoo
+
+networks:
+  default:
+    name: server
+    driver: bridge

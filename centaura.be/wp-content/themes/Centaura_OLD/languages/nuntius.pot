@@ -1,0 +1,458 @@
+# Copyright (C) 2013 Automattic
+# This file is distributed under the GNU General Public License v2.0.
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuntius 1.0-wpcom\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tags/nuntius\n"
+"POT-Creation-Date: 2013-01-04 17:23:46+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2013-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: 404.php:15
+msgid "Well this is somewhat embarrassing, isn&rsquo;t it?"
+msgstr ""
+
+#: 404.php:18
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: archive.php:19 archive.php:21 archive.php:23
+msgid "Archive | %s"
+msgstr ""
+
+#: archive.php:25 archive.php:27 search.php:18
+msgid "%s"
+msgstr ""
+
+#: archive.php:29
+msgid "Tag Archive | %s"
+msgstr ""
+
+#: archive.php:31 sidebar.php:19
+msgid "Archives"
+msgstr ""
+
+#: archive.php:37
+msgid "You are browsing the site archives by date."
+msgstr ""
+
+#: archive.php:50 search.php:32 sidebar-feature.php:36
+msgid "Permanent Link to %s"
+msgstr ""
+
+#: archive.php:55 content.php:20 image.php:32 page-template-home.php:60
+#: page-template-home.php:65 page-template-home.php:149
+#: page-template-home.php:168 page-template-home.php:217
+#: page-template-home.php:222 search.php:37 sidebar-feature.php:41
+msgid "Permalink to %s"
+msgstr ""
+
+#: archive.php:63 content.php:12 image.php:25 page-template-home.php:178
+#: page-template-home.php:229 page.php:20 search.php:45 sidebar-feature.php:53
+msgid "Leave a comment"
+msgstr ""
+
+#: archive.php:63 content.php:12 image.php:25 page-template-home.php:178
+#: page-template-home.php:229 page.php:20 search.php:45 sidebar-feature.php:53
+msgid "1 Comment"
+msgstr ""
+
+#: archive.php:63 content.php:12 image.php:25 page-template-home.php:178
+#: page-template-home.php:229 page.php:20 search.php:45 sidebar-feature.php:53
+msgid "% Comments"
+msgstr ""
+
+#: archive.php:66 image.php:49 page-template-home.php:181 search.php:48
+#: sidebar-feature.php:56
+msgid "(Edit)"
+msgstr ""
+
+#: archive.php:72 content.php:32 image.php:95 page.php:29
+msgid "Pages:"
+msgstr ""
+
+#: comments.php:21
+msgid ""
+"This post is password protected. Enter the password to view any comments."
+msgstr ""
+
+#: comments.php:36 comments.php:63
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:37 comments.php:64
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:38 comments.php:65
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:44
+msgid "One comment on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s comments on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:75
+msgid "Comments are closed."
+msgstr ""
+
+#: content.php:14 functions.php:228 functions.php:256 image.php:108
+#: page-template-home.php:156 page-template-home.php:232 page.php:22
+msgid "Edit"
+msgstr ""
+
+#: content.php:31 page.php:28
+msgid "Continue Reading"
+msgstr ""
+
+#: content.php:43
+msgid "About %s"
+msgstr ""
+
+#: footer.php:17
+msgid "http://wordpress.org/"
+msgstr ""
+
+#: footer.php:17
+msgid "Semantic Personal Publishing Platform"
+msgstr ""
+
+#: footer.php:17
+msgid "Proudly powered by %s"
+msgstr ""
+
+#: footer.php:19
+msgid "Theme: %1$s."
+msgstr ""
+
+#: functions.php:36
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:37
+msgid "Secondary Menu"
+msgstr ""
+
+#: functions.php:38
+msgid "Footer Menu"
+msgstr ""
+
+#: functions.php:81
+msgid "Post navigation"
+msgstr ""
+
+#: functions.php:85
+msgctxt "Previous post link"
+msgid "&larr;"
+msgstr ""
+
+#: functions.php:86
+msgctxt "Next post link"
+msgid "&rarr;"
+msgstr ""
+
+#: functions.php:91
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr ""
+
+#: functions.php:95
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: functions.php:110
+msgid "Default sidebar"
+msgstr ""
+
+#: functions.php:112
+msgid "Widgets dragged here will appear in the right sidebar."
+msgstr ""
+
+#: functions.php:120
+msgid "Header widget area"
+msgstr ""
+
+#: functions.php:122
+msgid ""
+"Widgets dragged here will appear inside the header area, to the right of the "
+"site title. This widget area works best with only one short widget."
+msgstr ""
+
+#: functions.php:130
+msgid "Feature widget area"
+msgstr ""
+
+#: functions.php:132
+msgid ""
+"Widgets placed here will appear to the right of the featured slider, if the "
+"slider is enabled. This widget area works best with only one short widget."
+msgstr ""
+
+#: functions.php:155
+msgid ""
+"<span class=\"sep\">Posted <span class=\"sep\"> by </span> <span class="
+"\"author vcard\"><a class=\"url fn n\" href=\"%3$s\" title=\"%4$s\">%5$s</"
+"a></span> on </span> <span class=\"entry-date\"><a href=\"%1$s\" rel="
+"\"bookmark\" title=\"%7$s\">%2$s</a></span> in <span class=\"entry-categories"
+"\">%6$s</span>"
+msgstr ""
+
+#: functions.php:159 functions.php:194
+msgid "View all posts by %s"
+msgstr ""
+
+#: functions.php:174
+msgid ""
+"<span class=\"tag-links\">Tags: %1$s</a></span> <span class=\"entry-permalink"
+"\"><a href=\"%2$s\" title=\"Permalink to %3$s\" rel=\"bookmark\">Permalink</"
+"a></span>"
+msgstr ""
+
+#: functions.php:176
+msgid ""
+"<span class=\"entry-permalink\"><a href=\"%2$s\" title=\"Permalink to %3$s\" "
+"rel=\"bookmark\">Permalink</a></span>"
+msgstr ""
+
+#: functions.php:192
+msgid ""
+"<span class=\"sep\"> By </span> <span class=\"author vcard\"><a class=\"url "
+"fn n\" href=\"%1$s\" title=\"%2$s\">%3$s</a></span> <span class=\"entry-date"
+"\"><a href=\"%4$s\" rel=\"bookmark\" title=\"%6$s\">%5$s</a></span>"
+msgstr ""
+
+#. translators: 1: date, 2: time
+#: functions.php:223
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: functions.php:231
+msgid "Reply"
+msgstr ""
+
+#: functions.php:239
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: functions.php:256
+msgid "Pingback:"
+msgstr ""
+
+#: functions.php:288
+msgid "Browsing: <span class=\"sep\">&raquo;</span> "
+msgstr ""
+
+#: functions.php:292
+msgid " Home "
+msgstr ""
+
+#: functions.php:305 functions.php:329 functions.php:335 functions.php:344
+#: functions.php:356 functions.php:362
+msgid "<span class=\"sep\">&raquo;</span>"
+msgstr ""
+
+#: functions.php:315
+msgid "<span class=\"sep\">&raquo;</span> Archives"
+msgstr ""
+
+#: functions.php:318
+msgid "<span class=\"sep\">&raquo;</span> Search Results"
+msgstr ""
+
+#: functions.php:321
+msgid "<span class=\"sep\">&raquo;</span> 404 Not Found"
+msgstr ""
+
+#: functions.php:409
+msgid "Page %s"
+msgstr ""
+
+#: image.php:17
+msgid "&larr; Previous"
+msgstr ""
+
+#: image.php:18
+msgid "Next &rarr;"
+msgstr ""
+
+#: image.php:41
+msgid ""
+"Published at <a href=\"%1$s\" title=\"Link to full-size image\">%2$s &times; "
+"%3$s</a> in <a href=\"%4$s\" title=\"Return to %5$s\" rel=\"gallery\">%5$s</"
+"a>"
+msgstr ""
+
+#: image.php:100
+msgid ""
+"<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Post a "
+"comment</a> or leave a trackback: <a class=\"trackback-link\" href=\"%s\" "
+"title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
+msgstr ""
+
+#: image.php:102
+msgid ""
+"Comments are closed, but you can leave a trackback: <a class=\"trackback-link"
+"\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback"
+"\">Trackback URL</a>."
+msgstr ""
+
+#: image.php:104
+msgid ""
+"Trackbacks are closed, but you can <a class=\"comment-link\" href=\"#respond"
+"\" title=\"Post a comment\">post a comment</a>."
+msgstr ""
+
+#: image.php:106
+msgid "Both comments and trackbacks are currently closed."
+msgstr ""
+
+#: inc/theme-options.php:31
+msgid "Theme Options"
+msgstr ""
+
+#: inc/theme-options.php:69
+msgid " Theme Options"
+msgstr ""
+
+#: inc/theme-options.php:72
+msgid "Options saved"
+msgstr ""
+
+#: inc/theme-options.php:83 inc/theme-options.php:85
+msgid "Select a background color for the header and main menu"
+msgstr ""
+
+#: inc/theme-options.php:88 inc/theme-options.php:105
+msgid "Default color: %s"
+msgstr ""
+
+#: inc/theme-options.php:100 inc/theme-options.php:102
+msgid "Select a link color"
+msgstr ""
+
+#: inc/theme-options.php:116 inc/theme-options.php:119
+msgid "Choose a primary featured category for posts on the News Page template"
+msgstr ""
+
+#: inc/theme-options.php:147
+msgid "Save Options"
+msgstr ""
+
+#: inc/widgets.php:31
+msgid "Displays posts by date and comments in tab format."
+msgstr ""
+
+#: inc/widgets.php:33
+msgid "Nuntius Tabbed Widget"
+msgstr ""
+
+#: inc/widgets.php:92
+msgid "(%1$s)"
+msgstr ""
+
+#: inc/widgets.php:138
+msgid "Most"
+msgstr ""
+
+#: inc/widgets.php:140
+msgid "Recent"
+msgstr ""
+
+#: inc/widgets.php:141
+msgid "Commented"
+msgstr ""
+
+#: inc/widgets.php:147
+msgid "Title:"
+msgstr ""
+
+#: inc/widgets.php:151
+msgid "Limit:"
+msgstr ""
+
+#: inc/widgets.php:155
+msgid "Recent Posts Tab Title:"
+msgstr ""
+
+#: inc/widgets.php:159
+msgid "Comments Tab Title:"
+msgstr ""
+
+#: page-template-home.php:80
+msgid "Previous"
+msgstr ""
+
+#: page-template-home.php:81
+msgid "Next"
+msgstr ""
+
+#: page-template-home.php:171 sidebar-feature.php:46
+msgid ""
+"<span class=\"entry-date\"><a href=\"%1$s\" rel=\"bookmark\" title=\"%3$s\">"
+"%2$s</a></span>"
+msgstr ""
+
+#: page-template-home.php:211
+msgid "More Articles"
+msgstr ""
+
+#: search.php:22
+msgid "You are browsing the search results for: %s."
+msgstr ""
+
+#: search.php:63
+msgid "Nothing Found"
+msgstr ""
+
+#: search.php:66
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: searchform.php:13
+msgid "Search this site..."
+msgstr ""
+
+#: searchform.php:14
+msgid "Search"
+msgstr ""
+
+#: sidebar-feature.php:28
+msgid "Top Articles"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Nuntius"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "http://theme.wordpress.com/themes/nuntius"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"If you’ve been itching to turn your blog into an online newspaper or "
+"magazine, Nuntius could be your perfect companion. Based on the highly-"
+"popular News theme by Justin Tadlock, Nuntius offers an advanced, news-style "
+"page template that lets you highlight sticky posts and featured categories."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Automattic"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://automattic.com"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "News Template"
+msgstr ""
