@@ -21,11 +21,6 @@ services:
     networks: ["default"]
     env_file:
       - ./.env
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: centaura
-      MYSQL_USER: centaura
-      MYSQL_PASSWORD: YhCKpSjBdUv7EbWX
 
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
@@ -46,10 +41,6 @@ services:
       - mysql
     env_file:
       - ./.env
-    environment:
-      WORDPRESS_DB_HOST: mysql:3306
-      WORDPRESS_DB_USER: wordpress
-      WORDPRESS_DB_PASSWORD: YhCKpSjBdUv7EbWX
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
@@ -63,39 +54,46 @@ services:
     networks: ["default"]
     env_file:
       - ./.env
-    environment:
-      PMA_HOST: mysql
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_USER: centaura
-      MYSQL_PASSWORD: YhCKpSjBdUv7EbWX
 
   odoo:
-    image: odoo:latest
+    build:
+      context: .
+      dockerfile: ./config/docker/odoo/Dockerfile
     depends_on:
-      - postgress
+      - postgres
     links:
-      - postgress
+      - postgres
     volumes:
       - ./volumes/odoo:/var/lib/odoo
+
     ports:
       - "8069:8069"
     networks: ["default"]
     env_file:
       - ./.env
-    environment:
-      - HOST=postgress
-      - USER=odoo
-      - PASSWORD=myodoo
-  postgress:
+
+  postgres:
     image: postgres:9.4
     volumes:
-      - ./volumes/postgress:/var/lib/postgres/data
+      - ./volumes/postgres:/var/lib/postgresql/data/pgdata
+    networks: ["default"]
+    ports:
+      - "5432:5432"
+    env_file:
+      - ./.env
+
+  phppgadmin:
+    image: dockage/phppgadmin:latest
+    depends_on:
+      - postgres
+    ports:
+      - 8282:80
+    links:
+      - postgres
+    restart: on-failure
     networks: ["default"]
     env_file:
       - ./.env
-    environment:
-      - POSTGRES_USER=odoo
-      - POSTGRES_PASSWORD=myodoo
 
 networks:
   default:

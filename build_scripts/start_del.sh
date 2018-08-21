@@ -5,6 +5,6 @@ mkdir ./volumes
 
 mkdir ./volumes/mysql
 mkdir ./volumes/odoo
-mkdir ./volumes/postgress
+mkdir ./volumes/postgres
 mkdir ./volumes/wordpress
 chmod -R 777 ./volumes
