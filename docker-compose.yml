@@ -110,6 +110,24 @@ services:
       - MYSQL_PORT_3306_TCP_PORT=3306
       - BACKUP_TIME=$WORDPRESS_BACKUPTIME
 
+  backup_odoo:
+    build:
+      context: .
+      dockerfile: ./config/docker/odoo_backup/Dockerfile
+    env_file:
+      - ./.env
+
+    environment:
+      - ODOO_DB_NAME=$ODOO_DB_NAME
+      - ADMIN_PASSWORD=$ADMIN_PASSWORD
+      - BACKUP_TIME=$ODOO_BACKUPTIME
+    volumes:
+      - ./backups/odoo/:/backups
+    depends_on:
+      - odoo
+    links:
+      - odoo
+
 networks:
   default:
     name: server

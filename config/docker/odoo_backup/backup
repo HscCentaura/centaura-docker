@@ -1,0 +1,29 @@
+#!/bin/bash
+
+cleanup() {
+  echo "Cleanup backup older than $CLEANUP_OLDER_THAN days"
+  toberemove=$(find /backups/ -type f -not -name ".*" -mtime +$CLEANUP_OLDER_THAN | wc -l)
+  echo "Will try to remove $toberemove files"
+  find /backups/ -type f -not -name ".*" -mtime +$CLEANUP_OLDER_THAN -exec rm {} \;
+}
+
+if [ -z "$ODOO_DB_NAME" ]; then echo "Error: ODOO_DB_NAME not set"; echo "Finished: FAILURE"; exit 1; fi
+
+if [ -n "$CLEANUP_OLDER_THAN" ]; then cleanup;  fi
+
+echo 'creating backup archive of odoo'
+
+echo "master_pwd="$ADMIN_PASSWORD"&name="$ODOO_DB_NAME"&backup_format=zip"
+
+echo $ODOO_DB_NAME
+echo $ADMIN_PASSWORD
+
+ curl -X POST \
+    http://odoo:8069/web/database/backup \
+    -H  'Content-Type: application/x-www-form-urlencoded' \
+    --data "master_pwd="$ADMIN_PASSWORD"&name="$ODOO_DB_NAME"&backup_format=zip" \
+    -o /backups/backup_$(date +%Y%m%d).zip
+
+
+
+echo 'Finished: SUCCESS'
