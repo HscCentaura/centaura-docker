@@ -2,4 +2,5 @@
 
 CREATE USER 'wordpress'@'%' IDENTIFIED BY 'YhCKpSjBdUv7EbWX';
 GRANT ALL PRIVILEGES ON * . * TO 'wordpress'@'%';
+GRANT SELECT,LOCK TABLES ON DBNAME.* TO 'wordpress'@'localhost';
 FLUSH PRIVILEGES;

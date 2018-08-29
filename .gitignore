@@ -66,4 +66,5 @@ styleguide/*
 dist/
 Volumes/*
 backup/*
+backups/*
 config/files/*

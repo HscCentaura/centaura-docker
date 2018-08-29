@@ -95,6 +95,21 @@ services:
     env_file:
       - ./.env
 
+  backup:
+    image: aveltens/wordpress-backup
+    restart: always
+    volumes:
+      - ./backups/wordpress/:/backups
+      - ./volumes/wordpress:/var/www/html
+    depends_on:
+      - mysql
+    environment:
+      - MYSQL_ENV_MYSQL_DATABASE=$WORDPRESS_DB_NAME
+      - MYSQL_ENV_MYSQL_USER=$WORDPRESS_DB_USER
+      - MYSQL_ENV_MYSQL_PASSWORD=$WORDPRESS_DB_PASSWORD
+      - MYSQL_PORT_3306_TCP_PORT=3306
+      - BACKUP_TIME=$WORDPRESS_BACKUPTIME
+
 networks:
   default:
     name: server
